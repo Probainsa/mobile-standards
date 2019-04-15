@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="main.css">
+
+    <title>Shopping list</title>
+  </head>
+  <body>
+  
+  	<nav class="navbar navbar-expand-lg navbar-dark text-white text-uppercase" style="background-color: #6BBCBF;">
+		  <a class="navbar-brand" href="Vita.html"><h1>vita</h1></a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+				  <li class="nav-item">
+					<a class="nav-link" href="aboutVita.html">about vita<span class="sr-only">(current)</span></a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="fmd.html">fasting mimicking diet</a>
+				  </li>
+				  
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+				  </li>
+				</ul>
+			  </div>
+
+		<a role="button" href= "myDietPlan.html" class="btn btn-outline-success my-2 my-sm-0 text-white text-uppercase" style="background-color: #5293A7;">my diet plan</a>
+
+	   <!--button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button-->
+		
+	  </div>
+		
+	</nav>
+
+    
+	<div class="container">
+	<h3>Shopping list</h3>
+	
+	   <form class="form-inline my-2 my-lg-0">
+		  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+		  <button class="btn btn-outline-default my-2 my-sm-0" type="submit">Search</button>
+       </form>
+	
+		<h6>Vegetables</h6>
+			<p><ul>
+			<li>aubergines</li>
+			<div class="aubergines">
+		<div class="block">
+		<p>aubergines</p>
+		</div>
+		<div class="block">
+			<button class="btn btn-lg btn-default" id="aubDecrement" onclick="aubDecrement();" type="button">+</button>
+			</div>
+		<div class="block">
+		<div class="col-xs-2" id="aubergine">
+		<label for="aub"></label>
+		<input class="form-control" id="aubergineNumber type="text" />
+		</div>
+		<div class="block">
+		<button class="btn btn-lg btn-default" id="aubIncrement" onclick="aubIncrement();" type="button">-</button>
+		</div>
+		</div>
+			<li>peppers</li>
+				<div class="ul-field-contain">
+					<label for="spin">peppers</label>
+					
+					<div class="ui-controlgroup ui-controlgroup-horizontal ui-group-theme-a ui-corner-all" data-role="controlgroup" data-type="horizontal" data-mini="false" data-theme="a">
+					<div class="ui-controlgroup-controls ">
+					<div class="ui-btn ui-icon-minus ui-btn-icon-notext ui-first-child">&nbsp;</div>
+					<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-btn" style="padding: 4px 0px 3px;">
+					<input name="spin" id="setSpin" style="width: 50px; text-align: center;" type="text" min="0" max="15" value="1" data-role="spinbox"></div>
+					<div class="ui-btn ui-icon-plus ui-btn-icon-notext ui-last-child">&nbsp;</div>
+					</div>
+					</div>
+					
+					
+			<li>cabage</li>
+			<li>courgettes</li>
+			<li>carrots</li>
+			<li>parsnips</li>
+			<li>suede</li>
+			<li>celery</li>
+			<li>butternut squash</li>
+			</ul></p>
+		
+		<h6>Fruit</h6>
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for products...">
+			<ul id="muUL">
+			<li><a> apples </a></li>
+			<li><a> pears </a></li>
+			<li>strawberries</li>
+			<li>raspberries</li>
+			<li>blueberries</li>
+			<li>blackberries</li>
+			<li>oranges</li>
+			<li>clementines</li>
+			<li>tangerines</li>
+			<li>watermelon</li>
+			</ul>
+		<h6>Other</h6>
+			<p><ul>
+			<li>lemon juice</li>
+			<li>apple juice (unsweetened)</li>
+			<li>spieces</li>
+			<li>herbs</li>
+			<li>spring onions</li>
+			<li>garlic</li>
+			<li>salt and pepper</li>
+			</ul></p>
+	</div>
+	
+	<div class="container" id="box">
+		<div class="row well">
+			<h5>Click to print </h5>
+        
+			<center>
+				<button class="btn btn-primary hidden-print " onclick="myFunction()"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Print</button>
+			</center>
+        
+		</div>
+	</div>
+
+    <!-- Optional JavaScript -->
+		<script src="http://dev.jtsage.com/cdn/spinbox/latest/jqm-spinbox.min.js" type="text/javascript"></script>
+		<script src="script.js"></script>
+	
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
