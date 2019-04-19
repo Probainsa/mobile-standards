@@ -1,0 +1,121 @@
+[
+    {
+    "recipe": "Letcho",
+    "method": "Boil the onion in a small amount of water, add sliced vegatables, tomato pure and boil for another 15 min. Season before serving",
+    "photo": "assets/img/letcho.jpg",
+    "ingredients": [
+        {
+        "name": "peppers",
+        "quantity": 2,
+        "unit": "pieces"
+        },
+        {
+        "name": "courgettes",
+        "quantity": 1,
+        "unit": "piece"
+        },
+        {
+        "name": "onions",
+        "quantity": 1,
+        "unit": "pieces"
+        },
+        {
+        "name": "parsley",
+        "quantity": 1,
+        "unit": "g"
+        },
+        {
+        "name": "tomato pure",
+        "quantity": 50,
+        "unit": "g"
+        } 
+    ]
+},
+{
+    "recipe": "Steamed vegetables",
+    "method": "Boil the vegatables in salted water and sprinkle with dill before serving",
+    "photo": "assets/img/steamed.jpg",
+    "ingredients": [
+        {
+        "name": "carrots",
+        "quantity": 2,
+        "unit": "pieces"
+        },
+        {
+        "name": "cauliflower",
+        "quantity": 1,
+        "unit": "piece"
+        },
+        {
+        "name": "dill",
+        "quantity": 1,
+        "unit": "g"
+        } 
+    ]
+},
+{
+    "recipe": "Boiled beetroots",
+    "method": "Boil the beetroots in salted water for 15 min, slice the beetroots and apples. Arrange on a plate and sprinkle generously with chives",
+    "photo": "assets/img/beetroots.jpg",
+    "ingredients": [
+        {
+        "name": "beetroots",
+        "quantity": 2,
+        "unit": "pieces"
+        },
+        {
+        "name": "apple",
+        "quantity": 1,
+        "unit": "piece"
+        },
+        {
+        "name": "chives",
+        "quantity": 2,
+        "unit": "g"
+        } 
+    ]
+},
+{
+    "recipe": "Green leaf salad",
+    "method": "Salad and sliced vegetables arrange on a plate. Mix lemon, apple juice with vinegar and pour over salad",
+    "photo": "assets/img/greanleaf.jpg",
+    "ingredients": [
+        {
+        "name": "green leaf salad",
+        "quantity": 60,
+        "unit": "g"
+        },
+        {
+        "name": "tomatoes",
+        "quantity": 150,
+        "unit": "g"
+        },
+        {
+        "name": "celery",
+        "quantity": 1,
+        "unit": "g"
+        },
+        {
+        "name": "cucumber",
+        "quantity": 100,
+        "unit": "g"
+        },
+        {
+        "name": "lemon juice",
+        "quantity": 5,
+        "unit": "ml"
+        },
+        {
+        "name": "vinegar",
+        "quantity": 5,
+        "unit": "ml"
+        },
+        {
+        "name": "apple juice",
+        "quantity": 5,
+        "unit": "ml"
+        }        
+    ]
+}
+
+]

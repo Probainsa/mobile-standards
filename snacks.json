@@ -1,0 +1,102 @@
+[
+    {
+        "recipe": "Spinach smoothie",
+        "method": "Wash the vegetables and blend all ingredients with 200ml of water",
+        "photo": "assets/img/spinach.jpg",
+        "ingredients": [
+            {
+            "name": "apple",
+            "quantity": 1,
+            "unit": "piece"
+            },
+            {
+            "name": "spinach",
+            "quantity": 50,
+            "unit": "g"
+            },
+            {
+            "name": "ginger",
+            "quantity": 1,
+            "unit": "g"
+            },
+            {
+             "name": "lemon juice",
+             "quantity": 1,
+             "unit": "g"
+            }   
+            ]
+    },
+    
+    {
+        "recipe": "Coleslow",
+        "method": "Grate beetroots, shred cabbage and sprinkle generously with lemon juice",
+        "photo": "assets/img/coleslaw.jpg",
+        "ingredients": [
+            {
+            "name": "apple",
+            "quantity": 2,
+            "unit": "pieces"
+            },
+            {
+            "name": "cinnamon",
+            "quantity": 1,
+            "unit": "g"
+            },
+            {
+            "name": "lemon juice",
+            "quantity": 10,
+            "unit": "ml"
+            }
+        ]
+    },
+    {
+        "recipe": "Apple mousse",
+        "method": "Remove the core and simmer the apples until soft. Puree and add fresh mint",
+        "photo": "assets/img/mousse.jpg",
+        "ingredients": [
+            {
+            "name": "apples",
+            "quantity": 2,
+            "unit": "pieces"
+            },
+            {
+            "name": "mint",
+            "quantity": 1,
+            "unit": "g"
+            }
+        ]
+    },
+    {
+        "recipe": "Mixed berries",
+        "method": "Wash the fruit and sprinkle with apple and lemon juice",
+        "photo": "assets/img/berries.jpg",
+        "ingredients": [
+            {
+            "name": "strawberries",
+            "quantity": 100,
+            "unit": "g"
+            },
+            {
+            "name": "raspberries",
+            "quantity": 50,
+            "unit": "g"
+            },
+            {
+            "name": "blueberries",
+            "quantity": 50,
+            "unit": "g"
+            },
+            {
+            "name": "lemon juice",
+            "quantity": 5,
+            "unit": "ml"
+            },
+            {
+            "name": "apple juice",
+            "quantity": 5,
+            "unit": "ml"
+            }
+        ]
+    }
+    
+    ]

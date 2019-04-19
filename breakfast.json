@@ -1,0 +1,72 @@
+[
+{
+    "recipe": "Poached pears",
+    "method": "Wash and bake in the oven for 45 min. Sprinkle with cinnamon and ginger",
+    "photo": "assets/img/pear.jpg",
+    "ingredients": [
+        {
+          "name": "apple",
+          "quantity": 2,
+          "unit": "pieces"
+         },
+         {
+          "name": "cinnamon",
+          "quantity": 1,
+          "unit": "g"
+         },
+         {
+            "name": "ginger",
+            "quantity": 1,
+            "unit": "g"
+           }    
+        ]
+},
+
+{
+    "recipe": "Baked apples",
+    "method": "Wash and bake in the oven for 15 min. Sprinkle with cinnamon",
+    "photo": "assets/img/apple.jpg",
+    "ingredients": [
+        {
+        "name": "apple",
+        "quantity": 2,
+        "unit": "pieces"
+        },
+        {
+        "name": "cinnamon",
+        "quantity": 1,
+        "unit": "g"
+        }
+    ]
+},
+{
+    "recipe": "Apple juice",
+    "method": "Buy good quality apple juice; not from concentrate, without sugar",
+    "photo": "assets/img/applejuice.jpg",
+    "ingredients": [
+        {
+        "name": "apple juice",
+        "quantity": 250,
+        "unit": "ml"
+        }
+    ]
+},
+{
+    "recipe": "Grated carrots",
+    "method": "Wash the carrots, grate and sprinkle with lemon juice",
+    "photo": "assets/img/carrots.jpg",
+    "ingredients": [
+        {
+        "name": "carrots",
+        "quantity": 2,
+        "unit": "pieces"
+        },
+        {
+        "name": "lemon juice",
+        "quantity": 10,
+        "unit": "ml"
+        }
+    ]
+}
+
+]

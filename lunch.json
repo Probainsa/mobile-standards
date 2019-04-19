@@ -1,0 +1,147 @@
+[
+    {
+        "recipe": "Baked vegetables",
+        "method": "wash the vegetables, slice and arrange on a baking tray. Pour over tomato passata and season. Bake for 30 min in 160C",
+        "photo": "assets/img/bake.jpg",
+        "ingredients": [
+            {
+              "name": "peppers",
+              "quantity": 2,
+              "unit": "pieces"
+             },
+             {
+              "name": "crougettes",
+              "quantity": 1,
+              "unit": "piece"
+             },
+             {
+                "name": "aubergines",
+                "quantity": 1,
+                "unit": "piece"
+               },  
+               {
+                "name": "tomato passata",
+                "quantity": 300,
+                "unit": "ml"
+               },
+               {
+                "name": "oregano",
+                "quantity": 1,
+                "unit": "g"
+               },
+               {
+                "name": "basil",
+                "quantity": 5,
+                "unit": "g"
+               }    
+            ]
+    },
+    
+    {
+        "recipe": "Vegetable soup",
+        "method": "Wash and slice the vegetables. Boil in water for 20 min and season before serving",
+        "photo": "assets/img/soup.jpg",
+        "ingredients": [
+            {
+            "name": "carrots",
+            "quantity": 2,
+            "unit": "pieces"
+            },
+            {
+            "name": "parsnip",
+            "quantity": 1,
+            "unit": "piece"
+            },
+            {
+                "name": "onions",
+                "quantity": 1,
+                "unit": "pieces"
+                },
+                {
+                "name": "celery",
+                "quantity": 1,
+                "unit": "piece"
+                },
+                {
+                    "name": "parsley",
+                    "quantity": 1,
+                    "unit": "g"
+                    },
+                    {
+                    "name": "dill",
+                    "quantity": 1,
+                    "unit": "g"
+                    }
+                    ,            {
+                        "name": "majoran",
+                        "quantity": 0.5,
+                        "unit": "g"
+                        },
+                        {
+                        "name": "basil",
+                        "quantity": 1,
+                        "unit": "g"
+                        }
+        ]
+    },
+    {
+        "recipe": "Grilled pumpkin",
+        "method": "Slice the pumpkin, and grill for 20 min in 180C. Before serving sprinkle with parsley",
+        "photo": "assets/img/pumpkin.jpg",
+        "ingredients": [
+            {
+            "name": "pumpkin",
+            "quantity": 1,
+            "unit": "piece"
+            },
+            {
+                "name": "parsley",
+                "quantity": 1,
+                "unit": "g"
+                }
+        ]
+    },
+    {
+        "recipe": "Sauerkraut stew",
+        "method": "Mix cabbage and boil with chopped onions for 20 min. Add sliced apple, add tomato puree and boil for another 15 min. Season before serving",
+        "photo": "assets/img/stew.jpg",
+        "ingredients": [
+            {
+            "name": "soured cabbage",
+            "quantity": 150,
+            "unit": "g"
+            },
+            {
+            "name": "fresh cabbage",
+            "quantity": 200,
+            "unit": "g"
+            },
+            {
+            "name": "onions",
+            "quantity": 1,
+            "unit": "piece"
+            },
+            {
+            "name": "apples",
+            "quantity": 1,
+            "unit": "piece"
+            },
+            {
+            "name": "cumin",
+            "quantity": 0.5,
+            "unit": "g"
+            },
+            {
+            "name": "majoran",
+            "quantity": 0.5,
+            "unit": "g"
+            },
+            {
+            "name": "tomato pure",
+            "quantity": 50,
+            "unit": "g"
+            }
+            ]
+    }
+    
+    ]
