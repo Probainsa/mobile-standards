@@ -11,17 +11,19 @@
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
       <div class="card-body">
 
-
           <div class="card-group">
 		  
               <div class="card mx-2">
                 <div class="card-body">
-                <img class="img-fluid border border-dark" src="download.jpg" alt="breakfast">
+                <img class="img-fluid border border-dark" [src]='myPlan[0].firstMeal.photo' alt="breakfast">
                 <aside>
                   <h5 class="my-2">Breakfast</h5>
-                  <h6>recipe</h6>
+                  <h6>{{myPlan[0].firstMeal.recipeName}}</h6>
                   <p>Ingredients:</p>
-                  <p>add method here</p>
+                  <ul>
+                    <li *ngFor="let i of myPlan[0].firstMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}}</li>
+                  </ul>
+                  <p>Method: {{myPlan[0].firstMeal.method}}</p>
                   <a href="#" class="btn btn-secondary  float-right">Edit</a>
                 </aside>
                 </div>
@@ -30,12 +32,15 @@
               
               <div class="card mx-2">
               <div class="card-body">
-              <img class="img-fluid border border-dark" src="download.jpg" alt="snack">
+              <img class="img-fluid border border-dark" [src]='myPlan[0].secondMeal.photo' alt="snack">
               <aside>
                 <h5 class="my-2">Snack</h5>
-                <h6>recipe</h6>
+                <h6>{{myPlan[0].secondMeal.recipeName}}</h6>
                 <p>Ingredients</p>
-                <p>add method here</p>
+                <ul>
+                  <li *ngFor="let i of myPlan[0].secondMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}}</li>
+                </ul>
+                <p>Method: {{myPlan[0].secondMeal.method}}</p>
                 <a href="#" class="btn btn-secondary  float-right">Edit</a>
               </aside>
               </div>
@@ -43,12 +48,15 @@
               
               <div class="card mx-2">
               <div class="card-body">
-              <img class="img-fluid" src="download.jpg" alt="lunch">
+              <img class="img-fluid" [src]='myPlan[0].thirdMeal.photo' alt="lunch">
               <aside>
                 <h5 class="my-2" >Lunch</h5>
-                <h6>recipe</h6>
+                <h6>{{myPlan[0].thirdMeal.recipeName}}</h6>
                 <p>Ingredients</p>
-                <p>add method here</p>
+                <ul>
+                  <li *ngFor="let i of myPlan[0].thirdMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
+                </ul>
+                <p>Method: {{myPlan[0].thirdMeal.method}}</p>
                 <a href="#" class="btn btn-secondary  float-right">Edit</a>
               </aside>
               </div>
@@ -56,12 +64,15 @@
               
               <div class="card mx-2">
               <div class="card-body">
-              <img class="img-fluid" src="download.jpg" alt="snack">
+              <img class="img-fluid" [src]='myPlan[0].fourthMeal.photo' alt="snack">
               <aside>
                 <h5 class="my-2" >Snack</h5>
-                <h6>recipe</h6>
+                <h6>{{myPlan[0].fourthMeal.recipeName}}</h6>
                 <p>Ingredients:</p>
-                <p>add method here</p>
+                <ul>
+                    <li *ngFor="let i of myPlan[0].fourthMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
+                  </ul>
+                <p>Method: {{myPlan[0].fourthMeal.method}}</p>
                 <a href="#" class="btn btn-secondary  float-right">Edit</a>
               </aside>
               </div>
@@ -69,19 +80,20 @@
               
               <div class="card mx-2">
               <div class="card-body">
-              <img class="img-fluid" src="download.jpg" alt="dinner">
+              <img class="img-fluid" [src]='myPlan[0].fifthMeal.photo' alt="dinner">
               <aside>
                 <h5 class="my-2" >Dinner</h5>
-                <h6>recipe</h6>
-                <p>add a recipie here</p>
-                <p>add method here</p>
+                <h6>{{myPlan[0].fifthMeal.recipeName}}</h6>
+                <p>Ingredients: </p>
+                <ul>
+                    <li *ngFor="let i of myPlan[0].fifthMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
+                  </ul>
+                <p>Method:{{myPlan[0].fifthMeal.method}}</p>
                 <a href="#" class="btn btn-secondary  float-right">Edit</a>
               </aside>
               </div>
               </div>
               </div>
-
-
         
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
       </div>
@@ -103,11 +115,15 @@
 		  
               <div class="card mx-2">
                 <div class="card-body">
-                <img class="img-fluid border border-dark" src="download.jpg" alt="breakfast">
+                <img class="img-fluid border border-dark" [src]='myPlan[1].firstMeal.photo' alt="breakfast">
                 <aside>
                   <h5 class="my-2">Breakfast</h5>
-                  <p>add a recipie here</p>
-                  <p>add method here</p>
+                  <h6>{{myPlan[1].firstMeal.recipeName}}</h6>
+                    <p>Ingredients: </p>
+                    <ul>
+                        <li *ngFor="let i of myPlan[1].firstMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
+                      </ul>
+                    <p>Method: {{myPlan[1].firstMeal.method}}</p>
                   <a href="#" class="btn btn-secondary  float-right">Edit</a>
                 </aside>
                 </div>
@@ -116,11 +132,15 @@
               
               <div class="card mx-2">
               <div class="card-body">
-              <img class="img-fluid border border-dark" src="download.jpg" alt="snack">
+              <img class="img-fluid border border-dark" [src]='myPlan[1].secondMeal.photo' alt="snack">
               <aside>
                 <h5 class="my-2">Snack</h5>
-                <p>add a recipie here</p>
-                <p>add method here</p>
+                <h6>{{myPlan[1].secondMeal.recipeName}}</h6>
+                    <p>Ingredients: </p>
+                    <ul>
+                        <li *ngFor="let i of myPlan[1].secondMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
+                      </ul>
+                    <p>Method: {{myPlan[1].secondMeal.method}}</p>
                 <a href="#" class="btn btn-secondary  float-right">Edit</a>
               </aside>
               </div>
@@ -128,11 +148,15 @@
               
               <div class="card mx-2">
               <div class="card-body">
-              <img class="img-fluid" src="download.jpg" alt="lunch">
+              <img class="img-fluid" [src]='myPlan[1].thirdMeal.photo' alt="lunch">
               <aside>
                 <h5 class="my-2" >Lunch</h5>
-                <p>add a recipie here</p>
-                <p>add method here</p>
+                <h6>{{myPlan[1].thirdMeal.recipeName}}</h6>
+                    <p>Ingredients: </p>
+                    <ul>
+                        <li *ngFor="let i of myPlan[1].thirdMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
+                      </ul>
+                    <p>Method: {{myPlan[1].thirdMeal.method}}</p>
                 <a href="#" class="btn btn-secondary  float-right">Edit</a>
               </aside>
               </div>
@@ -140,11 +164,15 @@
               
               <div class="card mx-2">
               <div class="card-body">
-              <img class="img-fluid" src="download.jpg" alt="snack">
+              <img class="img-fluid" [src]='myPlan[1].fourthMeal.photo' alt="snack">
               <aside>
                 <h5 class="my-2" >Snack</h5>
-                <p>add a recipie here</p>
-                <p>add method here</p>
+                <h6>{{myPlan[1].fourthMeal.recipeName}}</h6>
+                <p>Ingredients: </p>
+                <ul>
+                    <li *ngFor="let i of myPlan[1].fourthMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
+                  </ul>
+                <p>Method: {{myPlan[1].fourthMeal.method}}</p>
                 <a href="#" class="btn btn-secondary  float-right">Edit</a>
               </aside>
               </div>
@@ -152,11 +180,15 @@
               
               <div class="card mx-2">
               <div class="card-body">
-              <img class="img-fluid" src="download.jpg" alt="dinner">
+              <img class="img-fluid" [src]='myPlan[1].fifthMeal.photo' alt="dinner">
               <aside>
                 <h5 class="my-2" >Dinner</h5>
-                <p>add a recipie here</p>
-                <p>add method here</p>
+                <h6>{{myPlan[1].fifthMeal.recipeName}}</h6>
+                    <p>Ingredients: </p>
+                    <ul>
+                        <li *ngFor="let i of myPlan[1].fifthMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
+                      </ul>
+                    <p>Method: {{myPlan[1].fifthMeal.method}}</p>
                 <a href="#" class="btn btn-secondary  float-right">Edit</a>
               </aside>
               </div>
@@ -184,11 +216,15 @@
 		  
               <div class="card mx-2">
                 <div class="card-body">
-                <img class="img-fluid border border-dark" src="download.jpg" alt="breakfast">
+                <img class="img-fluid border border-dark" [src]='myPlan[2].firstMeal.photo' alt="breakfast">
                 <aside>
                   <h5 class="my-2">Breakfast</h5>
-                  <p>add a recipie here</p>
-                  <p>add method here</p>
+                  <h6>{{myPlan[2].firstMeal.recipeName}}</h6>
+                  <p>Ingredients: </p>
+                    <ul>
+                        <li *ngFor="let i of myPlan[2].firstMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
+                      </ul>
+                  <p>Method: {{myPlan[2].firstMeal.method}}</p>
                   <a href="#" class="btn btn-secondary  float-right">Edit</a>
                 </aside>
                 </div>
@@ -197,11 +233,15 @@
               
               <div class="card mx-2">
               <div class="card-body">
-              <img class="img-fluid border border-dark" src="download.jpg" alt="snack">
+              <img class="img-fluid border border-dark" [src]='myPlan[2].secondMeal.photo' alt="snack">
               <aside>
                 <h5 class="my-2">Snack</h5>
-                <p>add a recipie here</p>
-                <p>add method here</p>
+                <h6>{{myPlan[2].secondMeal.recipeName}}</h6>
+                <p>Ingredients: </p>
+                  <ul>
+                      <li *ngFor="let i of myPlan[2].secondMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
+                    </ul>
+                <p>Method: {{myPlan[2].secondMeal.method}}</p>
                 <a href="#" class="btn btn-secondary  float-right">Edit</a>
               </aside>
               </div>
@@ -209,11 +249,15 @@
               
               <div class="card mx-2">
               <div class="card-body">
-              <img class="img-fluid" src="download.jpg" alt="lunch">
+              <img class="img-fluid" [src]='myPlan[2].thirdMeal.photo' alt="lunch">
               <aside>
                 <h5 class="my-2" >Lunch</h5>
-                <p>add a recipie here</p>
-                <p>add method here</p>
+                <h6>{{myPlan[2].thirdMeal.recipeName}}</h6>
+                <p>Ingredients: </p>
+                  <ul>
+                      <li *ngFor="let i of myPlan[2].thirdMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
+                    </ul>
+                <p>Method: {{myPlan[2].thirdMeal.method}}</p>
                 <a href="#" class="btn btn-secondary  float-right">Edit</a>
               </aside>
               </div>
@@ -221,11 +265,15 @@
               
               <div class="card mx-2">
               <div class="card-body">
-              <img class="img-fluid" src="download.jpg" alt="snack">
+              <img class="img-fluid" [src]='myPlan[2].fourthMeal.photo' alt="snack">
               <aside>
                 <h5 class="my-2" >Snack</h5>
-                <p>add a recipie here</p>
-                <p>add method here</p>
+                <h6>{{myPlan[2].fourthMeal.recipeName}}</h6>
+                <p>Ingredients: </p>
+                  <ul>
+                      <li *ngFor="let i of myPlan[2].fourthMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
+                    </ul>
+                <p>Method: {{myPlan[2].fourthMeal.method}}</p>
                 <a href="#" class="btn btn-secondary  float-right">Edit</a>
               </aside>
               </div>
@@ -233,11 +281,15 @@
               
               <div class="card mx-2">
               <div class="card-body">
-              <img class="img-fluid" src="download.jpg" alt="dinner">
+              <img class="img-fluid" [src]='myPlan[2].fifthMeal.photo' alt="dinner">
               <aside>
                 <h5 class="my-2" >Dinner</h5>
-                <p>add a recipie here</p>
-                <p>add method here</p>
+                <h6>{{myPlan[2].fifthMeal.recipeName}}</h6>
+                  <p>Ingredients: </p>
+                    <ul>
+                        <li *ngFor="let i of myPlan[2].fifthMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
+                      </ul>
+                  <p>Method: {{myPlan[2].fifthtMeal.method}}</p>
                 <a href="#" class="btn btn-secondary  float-right">Edit</a>
               </aside>
               </div>
