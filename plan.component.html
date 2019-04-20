@@ -2,7 +2,7 @@
   <div class="card">
     <div class="card-header" id="headingOne">
       <h5 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" (click)='dayClicked(1)'>
           Day #1
         </button>
       </h5>
@@ -24,7 +24,7 @@
                     <li *ngFor="let i of myPlan[0].firstMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}}</li>
                   </ul>
                   <p>Method: {{myPlan[0].firstMeal.method}}</p>
-                  <a href="#" class="btn btn-secondary  float-right">Edit</a>
+                  <button class="btn btn-secondary  float-right" (click)='toggleChoice(0)'>Edit</button>
                 </aside>
                 </div>
               </div>
@@ -41,7 +41,7 @@
                   <li *ngFor="let i of myPlan[0].secondMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}}</li>
                 </ul>
                 <p>Method: {{myPlan[0].secondMeal.method}}</p>
-                <a href="#" class="btn btn-secondary  float-right">Edit</a>
+                <a href="#" class="btn btn-secondary  float-right" (click)='toggleChoice(1)'>Edit</a>
               </aside>
               </div>
               </div>
@@ -57,7 +57,7 @@
                   <li *ngFor="let i of myPlan[0].thirdMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
                 </ul>
                 <p>Method: {{myPlan[0].thirdMeal.method}}</p>
-                <a href="#" class="btn btn-secondary  float-right">Edit</a>
+                <a href="#" class="btn btn-secondary  float-right" (click)='toggleChoice(2)'>Edit</a>
               </aside>
               </div>
               </div>
@@ -73,7 +73,7 @@
                     <li *ngFor="let i of myPlan[0].fourthMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
                   </ul>
                 <p>Method: {{myPlan[0].fourthMeal.method}}</p>
-                <a href="#" class="btn btn-secondary  float-right">Edit</a>
+                <a href="#" class="btn btn-secondary  float-right" (click)='toggleChoice(3)'>Edit</a>
               </aside>
               </div>
               </div>
@@ -89,13 +89,33 @@
                     <li *ngFor="let i of myPlan[0].fifthMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
                   </ul>
                 <p>Method:{{myPlan[0].fifthMeal.method}}</p>
-                <a href="#" class="btn btn-secondary  float-right">Edit</a>
+                <a href="#" class="btn btn-secondary  float-right" (click)='toggleChoice(4)'>Edit</a>
               </aside>
               </div>
               </div>
               </div>
         
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        Anim pariatur...
+      
+        <div class="card-group">
+
+            <div class="card" *ngFor="let meal of mealList let i = index">
+              <div class="card-header">
+                {{meal.recipeName}}
+              </div>
+              <div class="card-body">
+                <img class="img-fluid rounded border border-dark" [src]='meal.photo'>
+                <p>Ingredients:</p>
+                <ul>
+                  <li *ngFor='let i of meal.ingredients'>{{i.productName}} {{i.quantity}} {{i.unit}}</li>
+                </ul>
+                <p class="card-text">Method: {{meal.method}}</p>
+                <button class='btn btn-primary'>Select</button>
+              </div>
+            </div>
+  
+          </div>
+      
       </div>
     </div>
   </div>
@@ -295,9 +315,11 @@
               </div>
               </div>
               </div>
+              
 
 
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        
       </div>
     </div>
   </div>
