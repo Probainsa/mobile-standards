@@ -1,4 +1,7 @@
 <div class="accordion" id="accordionExample">
+  
+ <!--DAY 1--> 
+  
   <div class="card">
     <div class="card-header" id="headingOne">
       <h5 class="mb-0">
@@ -29,7 +32,6 @@
                 </div>
               </div>
               
-              
               <div class="card mx-2">
               <div class="card-body">
               <img class="img-fluid border border-dark" [src]='myPlan[0].secondMeal.photo' alt="snack">
@@ -41,7 +43,7 @@
                   <li *ngFor="let i of myPlan[0].secondMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}}</li>
                 </ul>
                 <p>Method: {{myPlan[0].secondMeal.method}}</p>
-                <a href="#" class="btn btn-secondary  float-right" (click)='toggleChoice(1)'>Edit</a>
+                <button class="btn btn-secondary  float-right" (click)='toggleChoice(1)'>Edit</button>
               </aside>
               </div>
               </div>
@@ -57,7 +59,7 @@
                   <li *ngFor="let i of myPlan[0].thirdMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
                 </ul>
                 <p>Method: {{myPlan[0].thirdMeal.method}}</p>
-                <a href="#" class="btn btn-secondary  float-right" (click)='toggleChoice(2)'>Edit</a>
+                <button class="btn btn-secondary  float-right" (click)='toggleChoice(2)'>Edit</button>
               </aside>
               </div>
               </div>
@@ -73,7 +75,7 @@
                     <li *ngFor="let i of myPlan[0].fourthMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
                   </ul>
                 <p>Method: {{myPlan[0].fourthMeal.method}}</p>
-                <a href="#" class="btn btn-secondary  float-right" (click)='toggleChoice(3)'>Edit</a>
+                <button class="btn btn-secondary  float-right" (click)='toggleChoice(3)'>Edit</button>
               </aside>
               </div>
               </div>
@@ -89,13 +91,13 @@
                     <li *ngFor="let i of myPlan[0].fifthMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
                   </ul>
                 <p>Method:{{myPlan[0].fifthMeal.method}}</p>
-                <a href="#" class="btn btn-secondary  float-right" (click)='toggleChoice(4)'>Edit</a>
+                <button class="btn btn-secondary  float-right" (click)='toggleChoice(4)'>Edit</button>
               </aside>
               </div>
               </div>
               </div>
         
-        Anim pariatur...
+        <!--drop down alternative selection--><br>Anim pariatur...
       
         <div class="card-group">
 
@@ -110,24 +112,26 @@
                   <li *ngFor='let i of meal.ingredients'>{{i.productName}} {{i.quantity}} {{i.unit}}</li>
                 </ul>
                 <p class="card-text">Method: {{meal.method}}</p>
-                <button class='btn btn-primary'>Select</button>
+                <button class='btn btn-primary' (click)='changeChoice(i)'>Select</button>
               </div>
             </div>
-  
-          </div>
-      
+         </div>
       </div>
     </div>
   </div>
+
+<!--DAY 2-->
+
   <div class="card">
     <div class="card-header" id="headingTwo">
       <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" (click)='dayClicked(2)'>
           Day #2
         </button>
       </h5>
     </div>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      
       <div class="card-body">
 
 
@@ -144,7 +148,7 @@
                         <li *ngFor="let i of myPlan[1].firstMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
                       </ul>
                     <p>Method: {{myPlan[1].firstMeal.method}}</p>
-                  <a href="#" class="btn btn-secondary  float-right">Edit</a>
+                  <button class='btn btn-secondary  float-right' (click)='toggleChoice(0)'>Edit</button>
                 </aside>
                 </div>
               </div>
@@ -161,14 +165,14 @@
                         <li *ngFor="let i of myPlan[1].secondMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
                       </ul>
                     <p>Method: {{myPlan[1].secondMeal.method}}</p>
-                <a href="#" class="btn btn-secondary  float-right">Edit</a>
+                <button class="btn btn-secondary  float-right" (click)='toggleChoice(1)'>Edit</button>
               </aside>
               </div>
               </div>
               
               <div class="card mx-2">
               <div class="card-body">
-              <img class="img-fluid" [src]='myPlan[1].thirdMeal.photo' alt="lunch">
+              <img class="img-fluid border border-dark" [src]='myPlan[1].thirdMeal.photo' alt="lunch">
               <aside>
                 <h5 class="my-2" >Lunch</h5>
                 <h6>{{myPlan[1].thirdMeal.recipeName}}</h6>
@@ -177,14 +181,14 @@
                         <li *ngFor="let i of myPlan[1].thirdMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
                       </ul>
                     <p>Method: {{myPlan[1].thirdMeal.method}}</p>
-                <a href="#" class="btn btn-secondary  float-right">Edit</a>
+                <button class="btn btn-secondary  float-right" (click)='toggleChoice(2)'>Edit</button>
               </aside>
               </div>
               </div>
               
               <div class="card mx-2">
               <div class="card-body">
-              <img class="img-fluid" [src]='myPlan[1].fourthMeal.photo' alt="snack">
+              <img class="img-fluid border border-dark" [src]='myPlan[1].fourthMeal.photo' alt="snack">
               <aside>
                 <h5 class="my-2" >Snack</h5>
                 <h6>{{myPlan[1].fourthMeal.recipeName}}</h6>
@@ -193,14 +197,14 @@
                     <li *ngFor="let i of myPlan[1].fourthMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
                   </ul>
                 <p>Method: {{myPlan[1].fourthMeal.method}}</p>
-                <a href="#" class="btn btn-secondary  float-right">Edit</a>
+                <button class='btn btn-secondary  float-right' (click)='toggleChoice(3)'>Edit</button>
               </aside>
               </div>
               </div>
               
               <div class="card mx-2">
               <div class="card-body">
-              <img class="img-fluid" [src]='myPlan[1].fifthMeal.photo' alt="dinner">
+              <img class="img-fluid rounded border border-dark" [src]='myPlan[1].fifthMeal.photo' alt="dinner">
               <aside>
                 <h5 class="my-2" >Dinner</h5>
                 <h6>{{myPlan[1].fifthMeal.recipeName}}</h6>
@@ -209,21 +213,41 @@
                         <li *ngFor="let i of myPlan[1].fifthMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
                       </ul>
                     <p>Method: {{myPlan[1].fifthMeal.method}}</p>
-                <a href="#" class="btn btn-secondary  float-right">Edit</a>
+                <button class="btn btn-secondary  float-right" (click)='toggleChoice(4)'>Edit</button>
               </aside>
               </div>
               </div>
               </div>
 
+        <!--drop down alternative selection--><br>Anim pariatur...
+      
+        <div class="card-group">
 
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          <div class="card" *ngFor="let meal of mealList let i = index">
+            <div class="card-header">
+              {{meal.recipeName}}
+            </div>
+            <div class="card-body">
+              <img class="img-fluid rounded border border-dark" [src]='meal.photo'>
+              <p>Ingredients:</p>
+              <ul>
+                <li *ngFor='let i of meal.ingredients'>{{i.productName}} {{i.quantity}} {{i.unit}}</li>
+              </ul>
+              <p class="card-text">Method: {{meal.method}}</p>
+              <button class='btn btn-primary' (click)='changeChoice(i)'>Select</button>
+            </div>
+          </div>
+       </div>
       </div>
     </div>
   </div>
+
+<!--DAY 3-->
+
   <div class="card">
     <div class="card-header" id="headingThree">
       <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" (click)='dayCliked(3)'>
           Day #3
         </button>
       </h5>
@@ -231,12 +255,11 @@
     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
       <div class="card-body">
 
-
           <div class="card-group">
 		  
               <div class="card mx-2">
                 <div class="card-body">
-                <img class="img-fluid border border-dark" [src]='myPlan[2].firstMeal.photo' alt="breakfast">
+                <img class="img-fluid border rounded border-dark" [src]='myPlan[2].firstMeal.photo' alt="breakfast">
                 <aside>
                   <h5 class="my-2">Breakfast</h5>
                   <h6>{{myPlan[2].firstMeal.recipeName}}</h6>
@@ -245,7 +268,7 @@
                         <li *ngFor="let i of myPlan[2].firstMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
                       </ul>
                   <p>Method: {{myPlan[2].firstMeal.method}}</p>
-                  <a href="#" class="btn btn-secondary  float-right">Edit</a>
+                  <button class="btn btn-secondary  float-right" (click)='toggleChoice(0)'>Edit</button>
                 </aside>
                 </div>
               </div>
@@ -253,7 +276,7 @@
               
               <div class="card mx-2">
               <div class="card-body">
-              <img class="img-fluid border border-dark" [src]='myPlan[2].secondMeal.photo' alt="snack">
+              <img class="img-fluid rounded border border-dark" [src]='myPlan[2].secondMeal.photo' alt="snack">
               <aside>
                 <h5 class="my-2">Snack</h5>
                 <h6>{{myPlan[2].secondMeal.recipeName}}</h6>
@@ -262,14 +285,14 @@
                       <li *ngFor="let i of myPlan[2].secondMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
                     </ul>
                 <p>Method: {{myPlan[2].secondMeal.method}}</p>
-                <a href="#" class="btn btn-secondary  float-right">Edit</a>
+                <button class="btn btn-secondary float-right" (click)='toggleChoice(1)'>Edit</button>
               </aside>
               </div>
               </div>
               
               <div class="card mx-2">
               <div class="card-body">
-              <img class="img-fluid" [src]='myPlan[2].thirdMeal.photo' alt="lunch">
+              <img class="img-fluid rounded border border-dark" [src]='myPlan[2].thirdMeal.photo' alt="lunch">
               <aside>
                 <h5 class="my-2" >Lunch</h5>
                 <h6>{{myPlan[2].thirdMeal.recipeName}}</h6>
@@ -278,14 +301,14 @@
                       <li *ngFor="let i of myPlan[2].thirdMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
                     </ul>
                 <p>Method: {{myPlan[2].thirdMeal.method}}</p>
-                <a href="#" class="btn btn-secondary  float-right">Edit</a>
+                <button class="btn btn-secondary  float-right" (click)='toggleChoice(2)'>Edit</button>
               </aside>
               </div>
               </div>
               
               <div class="card mx-2">
               <div class="card-body">
-              <img class="img-fluid" [src]='myPlan[2].fourthMeal.photo' alt="snack">
+              <img class="img-fluid rounded border border-dark" [src]='myPlan[2].fourthMeal.photo' alt="snack">
               <aside>
                 <h5 class="my-2" >Snack</h5>
                 <h6>{{myPlan[2].fourthMeal.recipeName}}</h6>
@@ -294,14 +317,14 @@
                       <li *ngFor="let i of myPlan[2].fourthMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
                     </ul>
                 <p>Method: {{myPlan[2].fourthMeal.method}}</p>
-                <a href="#" class="btn btn-secondary  float-right">Edit</a>
+                <button class="btn btn-secondary  float-right" (click)='toggleChoice(3)'>Edit</button>
               </aside>
               </div>
               </div>
               
               <div class="card mx-2">
               <div class="card-body">
-              <img class="img-fluid" [src]='myPlan[2].fifthMeal.photo' alt="dinner">
+              <img class="img-fluid rounded border border-dark" [src]='myPlan[2].fifthMeal.photo' alt="dinner">
               <aside>
                 <h5 class="my-2" >Dinner</h5>
                 <h6>{{myPlan[2].fifthMeal.recipeName}}</h6>
@@ -310,16 +333,32 @@
                         <li *ngFor="let i of myPlan[2].fifthMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
                       </ul>
                   <p>Method: {{myPlan[2].fifthtMeal.method}}</p>
-                <a href="#" class="btn btn-secondary  float-right">Edit</a>
+                <button class="btn btn-secondary  float-right" (click)='toggleChoice(4)'>Edit</button>
               </aside>
               </div>
               </div>
               </div>
-              
+           
+      <!--drop down alternative selection--><br>Anim pariatur...
+      
+                <div class="card-group">
 
-
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        
+                  <div class="card" *ngFor="let meal of mealList let i = index">
+                    <div class="card-header">
+                      {{meal.recipeName}}
+                    </div>
+                    <div class="card-body">
+                      <img class="img-fluid rounded border border-dark" [src]='meal.photo'>
+                      <p>Ingredients:</p>
+                      <ul>
+                        <li *ngFor='let i of meal.ingredients'>{{i.productName}} {{i.quantity}} {{i.unit}}</li>
+                      </ul>
+                      <p class="card-text">Method: {{meal.method}}</p>
+                      <button class='btn btn-primary' (click)='changeChoice(i)'>Select</button>
+                    </div>
+                  </div>
+               </div>
+       
       </div>
     </div>
   </div>
