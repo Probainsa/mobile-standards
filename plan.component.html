@@ -11,7 +11,7 @@
       </h5>
     </div>
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
       <div class="card-body">
 
           <div class="card-group">
@@ -97,11 +97,11 @@
               </div>
               </div>
         
-        <!--drop down alternative selection--><br>Anim pariatur...
+        <!--drop down alternative selection--><br>
       
-        <div class="card-group">
+        <div class="card-group" *ngIf='myPlan[0].showMealChoice' >
 
-            <div class="card" *ngFor="let meal of mealList let i = index">
+            <div class="card" *ngFor="let meal of mealList">
               <div class="card-header">
                 {{meal.recipeName}}
               </div>
@@ -219,9 +219,9 @@
               </div>
               </div>
 
-        <!--drop down alternative selection--><br>Anim pariatur...
+        <!--drop down alternative selection--><br>
       
-        <div class="card-group">
+        <div class="card-group" *ngIf='myPlan[1].showMealChoice'>
 
           <div class="card" *ngFor="let meal of mealList let i = index">
             <div class="card-header">
@@ -247,7 +247,7 @@
   <div class="card">
     <div class="card-header" id="headingThree">
       <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" (click)='dayCliked(3)'>
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" (click)='dayClicked(3)'>
           Day #3
         </button>
       </h5>
@@ -332,16 +332,16 @@
                     <ul>
                         <li *ngFor="let i of myPlan[2].fifthMeal.ingredients">{{i.productName}} {{i.quantity}} {{i.unit}} </li>
                       </ul>
-                  <p>Method: {{myPlan[2].fifthtMeal.method}}</p>
+                  <p>Method: {{myPlan[2].fifthMeal.method}}</p>
                 <button class="btn btn-secondary  float-right" (click)='toggleChoice(4)'>Edit</button>
               </aside>
               </div>
               </div>
               </div>
            
-      <!--drop down alternative selection--><br>Anim pariatur...
+      <!--drop down alternative selection--><br>
       
-                <div class="card-group">
+                <div class="card-group" *ngIf='myPlan[2].showMealChoice'>
 
                   <div class="card" *ngFor="let meal of mealList let i = index">
                     <div class="card-header">
@@ -364,7 +364,9 @@
   </div>
 </div>
 
-
-  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Add to shopping list
+<br>
+  <button class="btn btn-outline-primary">
+  Add to shopping list
   </button>
+
+  

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DietDay, IMealOption} from '../Shared/plan-detail.component';
 import {DataService } from '../Shared/DataService';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './plan.component.html',
@@ -8,7 +9,8 @@ import {DataService } from '../Shared/DataService';
 })
 export class PlanComponent implements OnInit {
  
-  constructor(private data: DataService) { }
+  constructor(private data: DataService,
+    private router:Router) { }
  
   public myPlan: DietDay[];
   public mealList: IMealOption [];
@@ -21,6 +23,7 @@ export class PlanComponent implements OnInit {
 
   toggleChoice(recipeChoice: number): void {
     this.selectedMeal = recipeChoice;
+    
     if (recipeChoice==0){
       this.mealList=this.data.breakfastSelection;
     }
@@ -40,6 +43,8 @@ export class PlanComponent implements OnInit {
     {
       this.mealList=this.data.dinnerSelection;
     }
+    console.log(this.selectedDay);
+    console.log(this.myPlan[0].showMealChoice);
     this.myPlan[this.selectedDay-1].showMealChoice = !this.myPlan[this.selectedDay-1].showMealChoice;
   }
 
@@ -63,11 +68,13 @@ export class PlanComponent implements OnInit {
     this.myPlan[this.selectedDay-1].showMealChoice = false;
   }
 
+  
 
   ngOnInit() {
     this.myPlan=this.data.myDiet;
-    
-  }
+    this.mealList = this.data.breakfastSelection;   
+  } 
 
   
 }
+
